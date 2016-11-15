@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Link, hashHistory} from 'react-router'
+import { Router, Route, Link, browserHistory} from 'react-router'
 
 const Home = () => <div><h1>Home</h1><Links/></div>
 const About = () => <div><h1>About</h1><Links/></div>
@@ -16,7 +16,7 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <Router history={ hashHistory}>
+      <Router history={browserHistory}>
         <Route path='/' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
